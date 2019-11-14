@@ -1,0 +1,26 @@
+@startuml
+start
+scale max 1000 height
+: Indlæs x;
+if (x er positiv) then (ja)
+    : y = x;
+else (nej)
+    :y = 0;
+endif
+: Udskriv y;
+stop 
+@enduml
+
+@startuml
+start
+scale max 1000 height
+: Indlæs x;
+if (x er positiv) then (ja)
+    : y = x;
+else (nej)
+    :y = -x;
+endif
+: Udskriv y;
+stop 
+@enduml
+

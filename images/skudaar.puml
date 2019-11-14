@@ -1,0 +1,47 @@
+@startuml
+
+start
+scale max 1000 height
+
+: Indlæs årstal;
+
+'floating note right: Inddata
+
+if (årstal % 4 == 0) then (ja)
+    if (årstal % 100 == 0) then (ja)
+        if (årstal % 400 == 0) then (ja)
+            : årstal ER skudår!;
+' floating note right: Uddata
+        else (nej)
+            :årstal er IKKE skudår!;
+'            floating note right: Uddata
+        endif
+    else (nej)
+        : årstal ER skudår!;
+'        floating note right: Uddata
+    endif
+else (nej)
+    :årstal er IKKE skudår!;
+'    floating note right: Uddata
+endif
+
+stop 
+
+@enduml
+
+@startuml
+
+start
+scale max 1000 height
+
+: Indlæs årstal;
+
+if (årstal % 4 == 0 && (årstal % 100 != 0 || årstal % 400 == 0)) then (ja)
+    : årstal ER skudår!;
+else (nej)
+    :årstal er IKKE skudår!;
+endif
+
+stop 
+
+@enduml

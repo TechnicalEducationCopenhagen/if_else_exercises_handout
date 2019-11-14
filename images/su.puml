@@ -1,0 +1,16 @@
+@startuml
+start
+scale max 1000 height
+: Indlæs alder;
+if (alder < 18) then (ja)
+    : su = 0;
+else (nej)
+    if (alder < 20) then (ja)
+        :su = 1382;
+    else (nej)
+        :su = 6166;
+    endif
+endif
+: Udskriv su;
+stop 
+@enduml
